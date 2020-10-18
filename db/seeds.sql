@@ -1,0 +1,62 @@
+INSERT INTO department (name)
+VALUES 
+('Accounting'),
+('Creative'),
+('Strategy'),
+('Human Resources'),
+('Administration'),
+('Sales'),
+('Digital');
+
+INSERT INTO employee_role (title, salary, department_id)
+VALUES
+('Sr. Accounting', 75000, 1),
+('Jr. Accounting', 50000, 1),
+('Copywriter', 50000, 2),
+('Associate Creative Director', 65000, 2),
+('Sr. Copywriter', 65000, 2),
+('Creative Director', 75000, 2),
+('Sr. Creative Director', 95000, 2),
+('Jr. Planner', 50000, 3),
+('Associate Planner', 75000, 3),
+('Sr. Planner', 80000, 3),
+('Jr. Recruiter', 65000, 4),
+('Sr. Recruiter', 75000, 4),
+('Director of Human Resources', 85000, 4),
+('VP Human Resources', 95000, 4),
+('Administrative Assistant', 45000, 5),
+('Administrative Director', 65000, 5),
+('Junior Sales', 45000, 6),
+('Associate Sales', 65000, 6),
+('VP Sales', 85000, 6),
+('EVP Sales', 125000, 6),
+('Jr. Web Developer', 65000, 7),
+('Associate Web Developer', 75000, 7),
+('Sr. Web Developer', 95000, 7),
+('VP Digital', 105000, 7);
+
+INSERT INTO employee (first_name, last_name, employee_role_id)
+VALUES
+('Rick', 'Sanchez', 24),
+('Morty', 'Smith', 2),
+('Summer', 'Smith', 3),
+('Beth', 'Smith', 4),
+('Jerry', 'Smith', 5),
+('Space', 'Beth', 6),
+('Michael', 'Scott', 7),
+('Dwight', 'Schrute', 8),
+('Pam', 'Beesly', 9),
+('Jim', 'Halpert', 10),
+('Creed', 'Bratton', 11),
+('Jan', 'Levinson', 12),
+('Erin', 'Hannon', 13),
+('Kevin', 'Malone', 14),
+('Angela', 'Martin', 15),
+('Andy', 'Bernard', 16),
+('Toby', 'Flenderson', 17),
+('Stanley', 'Hudson', 18),
+('Ryan', 'Howard', 19),
+('Oscar', 'Martinez', 20),
+('Kelly', 'Kapoor', 21),
+('Karen', 'Filippelli', 21),
+('Meredith', 'Palmer', 22);
