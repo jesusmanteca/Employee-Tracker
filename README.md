@@ -39,4 +39,5 @@ JavaScript, Inquirer, Node, SQL
 ## For More Information
 
 https://github.com/jesusmanteca
+
 jesusmanteca@gmail.com
