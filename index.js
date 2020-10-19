@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
 
+
 // create the connection to database
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -68,13 +69,15 @@ function startApp() {
         console.log("Employees are...");
         connection.query(`
         SELECT 
-            employee.id, 
+            employee.id AS ID, 
             employee.first_name as FirstName, 
             employee.last_name as LastName, 
             employee_role.title as Title, 
-            employee_role.salary as Salary 
-            FROM employee 
-        LEFT JOIN employee_role ON employee.employee_role_id = employee_role.id`,
+            employee_role.salary as Salary,
+            department.name as Department
+        FROM employee 
+        LEFT JOIN employee_role ON employee.employee_role_id = employee_role.id
+        LEFT JOIN department ON employee_role.department_id = department.id`,
             function (err, res) {
                 if (err) throw err;
                 console.table(res);
@@ -107,11 +110,49 @@ function startApp() {
             });
     }
     function addDept() {
-        console.log("Adding Dept");
-        initialPrompt();
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "deptChoice",
+                message: "Type a Department Name.",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter at least one character.";
+                }
+            }
+        ]).then(answer => {
+            const department = answer.deptChoice
+
+            console.log("Adding Dept");
+            const sql = `
+                INSERT INTO department (name)
+                VALUES (?)
+                `
+            const param = [department]
+            connection.query(sql, param, function (err, result) {
+                if (err) {
+                    console.log(err);
+                }
+                console.log(`
+                !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                !!!Department Added Successfully!!!
+                !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                `);
+                initialPrompt();
+            })
+        })
+
+
     }
     function addRole() {
         console.log("Adding Role");
+        inquirer.prompt([
+            {
+
+            }
+        ])
         initialPrompt();
     }
     function addEmp() {
