@@ -1,25 +1,42 @@
-# Employee-Tracker
+# Employee Tracker
 
-AS A business owner
-I WANT to be able to view and manage the departments, roles, and employees in my company
-SO THAT I can organize and plan my business
+## Description 
 
-GIVEN a command-line application that accepts user input
-WHEN I start the application
+Employee Tracker is an app that allows you to view employees, departments, and roles for a company. It also allows you to add employees, departments and roles. Simple to use, just follow the prompts and type.  
 
-THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
+## Table of Contents
 
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#License) 
+* [Contributing](#Contributing)
+* [Tests](#Tests) 
+* [Languages](#Languages) 
 
+## Installation
 
+Simply to go https://github.com/jesusmanteca/Employee-Tracker and clone the repository, run npm start and create your own list of employees with the command line.
 
-WHEN I choose to view all employees
-THEN I am presented with a formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
+---
+## License
 
-WHEN I choose to add a department
-THEN I am prompted to enter the name of the department and that department is added to the database
-WHEN I choose to add a role
-THEN I am prompted to enter the name, salary, and department for the role and that role is added to the database
-WHEN I choose to add an employee
-THEN I am prompted to enter the employee’s first name, last name, role, and manager and that employee is added to the database
-WHEN I choose to update an employee role
-THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
+  The application is covered under the MIT license.
+
+  ![Badge](https://img.shields.io/badge/License-MIT-blueviolet)
+
+## Contributing
+
+Others may contribute by requesting to contribute through GitHub, cloning the code and creating separate branches. All final code will be reviewed and approved if changes are favorable.
+
+## Video Link 
+
+[Video Link](https://youtu.be/vwiJ_Vq44NU)
+
+## Languages Used
+
+JavaScript, Inquirer, Node, SQL
+
+## For More Information
+
+https://github.com/jesusmanteca
+jesusmanteca@gmail.com
